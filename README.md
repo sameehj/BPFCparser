@@ -42,3 +42,9 @@ struct bpf_insn {<br/>
 	__s16	off;		/* signed offset */<br/>
 	__s32	imm;		/* signed immediate constant */<br/>
 };
+
+### Credits:
+* This stckoverflow post: https://stackoverflow.com/questions/39998050/how-to-get-linux-ebpf-assembly
+* The iovisor repo: https://github.com/iovisor/ubpf
+* Special thanks to Haia Khoury for creating the awk command, she made dealing with awk a much easier and nicer experience.
+Find her here: https://github.com/HaiaK
