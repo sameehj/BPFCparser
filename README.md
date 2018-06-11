@@ -1,6 +1,6 @@
 ## Rationale
 
-I have wasted many hours searching for a tool that can be used to accomplish this task but I have found none. So I've decided to write this scriptand it turns out to be easy when you know how :)
+I have wasted many hours searching for a tool that can be used to accomplish this task but I have found none. So I've decided to write this script. It turns out to be easy when you know how :)
 
 ## Instruction encoding
 
