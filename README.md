@@ -1,3 +1,7 @@
+## Rationale
+
+I have wasted many hours searching for a tool that can be used to accomplish this task but I have found none. So I've decided to write this scriptand it turns out to be easy when you know how :)
+
 ## Instruction encoding
 
 An eBPF program is a sequence of 64-bit instructions. This project assumes each
