@@ -31,10 +31,10 @@ clang -I path/to/iproute2/include -O2 -emit-llvm -c bpf_program.c -o - | llc -ma
 ## C-style array generation:
 The parse_dump script takes as an input a compiled object file and obtionally a section name and outputs a c-array style which can be used for initializing an array of the "struct bpf_insn" structure.
 
-struct bpf_insn {
-	__u8	code;		/* opcode */
-	__u8	dst_reg:4;	/* dest register */
-	__u8	src_reg:4;	/* source register */
-	__s16	off;		/* signed offset */
-	__s32	imm;		/* signed immediate constant */
+struct bpf_insn {<br/>
+	__u8	code;		/* opcode */<br/>
+	__u8	dst_reg:4;	/* dest register */<br/>
+	__u8	src_reg:4;	/* source register */<br/>
+	__s16	off;		/* signed offset */<br/>
+	__s32	imm;		/* signed immediate constant */<br/>
 };
