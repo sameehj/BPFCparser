@@ -46,6 +46,6 @@ if [[ -v SECTION ]]; then
     SECTION="--section $SECTION"
 fi
 
-RESULT=$(( llvm-objdump -S --disassemble-all --print-imm-hex $SECTION $OBJECTFILE  | awk '{n=split($0,a,"\t"); if(n==3){split(a[2],b," "); print "{0x"b[1]" ,0x"substr(b[2],2,1)" ,0x"substr(b[2],1,1)" ,0x"b[4]b[3]", 0x"b[8]b[7]b[6]b[5]"},"} next;}')  2>&1)
+RESULT=$(( llvm-objdump -S --disassemble-all --print-imm-hex $SECTION $OBJECTFILE  | awk '{n=split($0,a,"\t"); if(n==3){l=split(a[2],b," "); print "{0x"b[1]" ,0x"substr(b[2],2,1)" ,0x"substr(b[2],1,1)" ,0x"b[4]b[3]", 0x"b[8]b[7]b[6]b[5]"},"; if (l == 16){print "{0x"b[9]" ,0x"substr(b[10],2,1)" ,0x"substr(b[10],1,1)" ,0x"b[12]b[11]", 0x"b[16]b[15]b[14]b[13]"}," } }  next;} ')  2>&1)
 
 printf " = {\n$RESULT \n};\n"
